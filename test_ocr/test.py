@@ -4,12 +4,12 @@ import time
 import json
 import base64
 
-with open("C:\\Users\\user\\OneDrive\\바탕 화면\\4\\capston\\test_img.png", "rb") as f:
+with open("C:\\Users\\user\\OneDrive\\바탕 화면\\4\\capston\\test_ocr\\test_img.png", "rb") as f:
     img = base64.b64encode(f.read())
 
-URL = 'https://br2v3ztqo2.apigw.ntruss.com/custom/v1/29704/b24823359e042057eab283525ace201f34c9cd5c8c2a53214a43b5f4dd6b268d/general'
-KEY = 'TWNsdFhOQlZTU3JsVEx0R1hxaFRDbXpnblBBYUxmUFE='
 
+URL ='your_url'
+KEY = 'your_key'
 
 output_file = 'C:\\Users\\user\\OneDrive\\바탕 화면\\4\\capston\\output1.json'
 
