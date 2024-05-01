@@ -5,35 +5,37 @@ import json
 import base64
 import cv2
 import ipdb
-path = 'C:\\geumsangLee\\capston\\test_ocr\\img\\test3.png'
+path = 'C:\\geumsangLee\\capston\\test_ocr\\ocr_ver2.0\\img\\test_img.png'
 
 image = cv2.imread(path)
+#19 227 891 422
+x = 19
+y = 60
+width = 700
+height = 390
 
-x = 200
-y = 150
-width = 300
-height = 200
-
-cropped_image = image[y:y+height, x:x+width]
-
-while True:
-    key = cv2.waitKey(1) & 0xFF
-    if key == ord('q'): # 'q' 키를 누르면 종료
-        break
+roi = image[y:y+height, x:x+width]
+color = (0,0)
+thickness = 5
+cv2.rectangle(img=roi,pt1=(0,0),pt2=(width,height),color = color ,thickness = thickness)
+cv2.imshow('image',image)
+cv2.waitKey()
+cv2.imwrite('C:\\geumsangLee\\capston\\test_ocr\\ocr_ver2.0\\roi_img\\roi_img2.png',roi)
+cv2.destroyAllWindows()
 
 
-cv2.imwrite('C:\\geumsangLee\\capston\\test_ocr\\roi_img\\roi_img1.png',cropped_image)
 
 
-path = 'C:\\geumsangLee\\capston\\test_ocr\\roi_img\\'
-with open(path + "roi_img1.png", "rb") as f:
+'''
+path = 'C:\\geumsangLee\\capston\\test_ocr\\ocr_ver2.0\\roi_img\\'
+with open(path + "roi_img2.png", "rb") as f:
     img = base64.b64encode(f.read())
 
 URL = 'https://br2v3ztqo2.apigw.ntruss.com/custom/v1/29704/b24823359e042057eab283525ace201f34c9cd5c8c2a53214a43b5f4dd6b268d/general'
 KEY = 'TWNsdFhOQlZTU3JsVEx0R1hxaFRDbXpnblBBYUxmUFE='
 
 
-output_file = 'C:\\geumsangLee\\capston\\test_ocr\\json_file\\test4.json'
+output_file = 'C:\\geumsangLee\\capston\\test_ocr\\ocr_ver2.0\\json_file\\test4.json'
 
 headers = {
     "Content-Type": "application/json",
@@ -63,3 +65,4 @@ with open(output_file, 'w', encoding='utf-8') as outfile:
     json.dump(res, outfile, indent=4, ensure_ascii=False)
     
 #https://yunwoong.tistory.com/153 추가 참고 블로그
+'''
