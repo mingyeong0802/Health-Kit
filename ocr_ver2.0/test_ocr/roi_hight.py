@@ -8,10 +8,11 @@ import ipdb
 path = 'C:\\geumsangLee\\capston\\test_ocr\\ocr_ver2.0\\img\\test_img.png'
 
 image = cv2.imread(path)
+image = cv2.resize(image,(550,550))
 #19 227 891 422
 x = 19
 y = 60
-width = 700
+width = 500
 height = 390
 
 roi = image[y:y+height, x:x+width]

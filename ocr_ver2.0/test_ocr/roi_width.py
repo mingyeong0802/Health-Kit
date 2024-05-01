@@ -9,10 +9,11 @@ path = 'C:\\geumsangLee\\capston\\test_ocr\\ocr_ver2.0\\img\\test3.png'
 
 #57 36 680 448
 image = cv2.imread(path)
-x = 16
-y = 227
-width = 875
-height = 200
+image = cv2.resize(image,(550,550))
+x = 10
+y = 200
+width = 530
+height = 150
 
 roi = image[y:y+height, x:x+width]
 color = (0,0,255)
