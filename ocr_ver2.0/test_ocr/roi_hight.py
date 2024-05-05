@@ -27,7 +27,6 @@ cv2.destroyAllWindows()
 
 
 
-'''
 path = 'C:\\geumsangLee\\capston\\test_ocr\\ocr_ver2.0\\roi_img\\'
 with open(path + "roi_img2.png", "rb") as f:
     img = base64.b64encode(f.read())
@@ -36,7 +35,7 @@ URL = 'https://br2v3ztqo2.apigw.ntruss.com/custom/v1/29704/b24823359e042057eab28
 KEY = 'TWNsdFhOQlZTU3JsVEx0R1hxaFRDbXpnblBBYUxmUFE='
 
 
-output_file = 'C:\\geumsangLee\\capston\\test_ocr\\ocr_ver2.0\\json_file\\test4.json'
+output_file = 'C:\\geumsangLee\\capston\\test_ocr\\ocr_ver2.0\\json_file\\img_hight.json'
 
 headers = {
     "Content-Type": "application/json",
@@ -66,4 +65,3 @@ with open(output_file, 'w', encoding='utf-8') as outfile:
     json.dump(res, outfile, indent=4, ensure_ascii=False)
     
 #https://yunwoong.tistory.com/153 추가 참고 블로그
-'''

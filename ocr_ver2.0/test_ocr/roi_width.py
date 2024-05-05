@@ -5,7 +5,7 @@ import json
 import base64
 import cv2
 import ipdb
-path = 'C:\\geumsangLee\\capston\\test_ocr\\ocr_ver2.0\\img\\test3.png'
+path = 'C:\\geumsangLee\\capston\\test_ocr\\ocr_ver2.0\\img\\test4.png'
 
 #57 36 680 448
 image = cv2.imread(path)
