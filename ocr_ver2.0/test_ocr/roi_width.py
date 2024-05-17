@@ -11,7 +11,7 @@ URL = 'https://br2v3ztqo2.apigw.ntruss.com/custom/v1/29704/b24823359e042057eab28
 KEY = 'TWNsdFhOQlZTU3JsVEx0R1hxaFRDbXpnblBBYUxmUFE='
 
 #이미지 받아오기 test 이미지임
-path = 'C:\\geumsangLee\\capston\\test_ocr\\ocr_ver2.0\\img\\test4.png'
+path = 'C:\\geumsangLee\\capston\\test_ocr\\ocr_ver2.0\\img\\img5.png'
 
 #이미지 불러오기 후 화면에 5초 보여줌
 # 변경 사항 -> roi 없이 이미지 그대로 roi_img로 받아오게 됨 
