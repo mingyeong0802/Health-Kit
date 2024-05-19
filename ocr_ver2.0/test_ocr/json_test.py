@@ -81,12 +81,12 @@ for key_2, val_2 in result.items():
             my_list.append(v_2)
         if len(lst_2) != 0 and idx == 0:
             if len(lst_2) == 1: 
-                lst_2.append('Nan')
+                lst_2.append('0')
             if lst_2[0] == 'g': 
                 print('g',lst_2[0]) 
                 lst_2[0] = '0g'   #'0g'인데 'g'으로만 인식이 되어 '0g'으로 전처리
             if len(lst_2) == 0:
-                lst_2.append('Nan','Nan')
+                lst_2.append('0','0')
             result[key_name] = lst_2
             key_name = key_2
             lst_2 = [] #리셋
@@ -99,7 +99,7 @@ if len(my_list) != 0:
     result[key_name] = lst_2
 
 #---변경 부분) 없는 영양성분에 nan 값 넣어서 데이터 프레임에 추가함
-nan = ['Nan','Nan']
+nan = ['0','0']
 for name_ls in name_lst:
     if name_ls not in result:
         result[name_ls]=nan
